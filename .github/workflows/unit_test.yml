@@ -23,8 +23,8 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Install OpenEXR
       run: |
-        sudo apt-get update
-        sudo apt-get install openexr
+        apt-get update
+        apt-get install openexr
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
