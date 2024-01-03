@@ -1,7 +1,6 @@
 import argparse
 import os
 import datetime
-import build
 
 TAG_ENV_NAME = "GITHUB_ACTION_TAG_NAME"
 VERSION_TEXT = "0.0.0"
