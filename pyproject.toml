@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "openexr-python"
+authors = [{name = "404Vector", email = "tiryul@gmail.com"}]
+readme = "README.md"
+license = {file = "LICENSE"}
+classifiers = ["License :: OSI Approved :: MIT License"]
+dynamic = ["version", "description", "dependencies"]
+requires-python = ">=3.9"
+
+[tool.setuptools.dynamic]
+version = {attr = "openexr_python.__version__"}
+dependencies = {file = ["requirements.txt"]}
+description = {file = ["README.md"]}
+
+[project.urls]
+Home = "https://github.com/404Vector/OpenEXR-Python"
