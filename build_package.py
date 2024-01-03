@@ -1,6 +1,7 @@
 import argparse
 import os
 import datetime
+import build
 
 TAG_ENV_NAME = "GITHUB_ACTION_TAG_NAME"
 VERSION_TEXT = "0.0.0"
@@ -47,9 +48,12 @@ def swap_version_with_tag(
         print(result)
 
 
-def build_package():
+def build_package(is_debug: bool):
+    if is_debug is not True:
+        res = os.system("pip install build")
+        assert res == 0, f"The building process failed. code = {res}"
     res = os.system("python -m build")
-    assert res == 0
+    assert res == 0, f"The building process failed. code = {res}"
 
 
 def main(args: argparse.Namespace):
@@ -60,7 +64,9 @@ def main(args: argparse.Namespace):
         version_text=VERSION_TEXT,
         is_debug=is_debug,
     )
-    build_package()
+    build_package(
+        is_debug=is_debug,
+    )
 
 
 if __name__ == "__main__":
