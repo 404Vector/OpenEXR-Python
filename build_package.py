@@ -47,10 +47,7 @@ def swap_version_with_tag(
         print(result)
 
 
-def build_package(is_debug: bool):
-    if is_debug is not True:
-        res = os.system("pip install build")
-        assert res == 0, f"The building process failed. code = {res}"
+def build_package():
     res = os.system("python -m build")
     assert res == 0, f"The building process failed. code = {res}"
 
@@ -63,9 +60,7 @@ def main(args: argparse.Namespace):
         version_text=VERSION_TEXT,
         is_debug=is_debug,
     )
-    build_package(
-        is_debug=is_debug,
-    )
+    build_package()
 
 
 if __name__ == "__main__":
