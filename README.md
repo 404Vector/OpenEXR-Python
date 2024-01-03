@@ -21,5 +21,5 @@ Please install following the [official installation guide](https://openexr.com/e
 
 ### Step 2 - Install OpenEXR-Python
 ```bash
-pip install openexr
+pip install openexr-python
 ```
