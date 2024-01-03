@@ -1,6 +1,6 @@
 # OpenEXR-Python
 
-OpenEXR is a C++-based library, and there is a python binding ([pip-openexr](https://github.com/sanguinariojoe/pip-openexr?tab=readme-ov-file)) written by 'sanguinariojoe'.
+[OpenEXR](https://github.com/AcademySoftwareFoundation/openexr) is a C++-based library, and there is a python binding ([pip-openexr](https://github.com/sanguinariojoe/pip-openexr?tab=readme-ov-file)) written by 'sanguinariojoe'.
 
 However, because it was bound directly, python intellisense does not work.
 
