@@ -36,21 +36,21 @@ class EXRHeader:
         return EXRWindow.parse_raw_to_window(raw_dataWindow)
 
     @property
-    def lineOrder(self) -> EXRLineOrderType:
+    def line_order(self) -> EXRLineOrderType:
         raw_line_order: Any = self["lineOrder"]
         return EXRLineOrderType.parse_raw2pyobj(raw_line_order=raw_line_order)
 
     @property
-    def pixelAspectRatio(self) -> float:
+    def pixel_aspect_ratio(self) -> float:
         raw_pixel_aspect_ratio: float = self["pixelAspectRatio"]
         return raw_pixel_aspect_ratio
 
     @property
-    def screenWindowCenter(self) -> Tuple[float, float]:
+    def screen_window_center(self) -> Tuple[float, float]:
         raw_screen_window_center: Any = self["screenWindowCenter"]
         return (raw_screen_window_center.x, raw_screen_window_center.y)
 
     @property
-    def screenWindowWidth(self) -> float:
+    def screen_window_width(self) -> float:
         raw_screen_window_width: float = self["screenWindowWidth"]
         return raw_screen_window_width
